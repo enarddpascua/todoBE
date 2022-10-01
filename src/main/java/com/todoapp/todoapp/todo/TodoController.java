@@ -17,7 +17,7 @@ public class TodoController {
     private TodoService todoService;
 
     @RequestMapping("/todos")
-    @CrossOrigin("http://localhost:3000")
+    @CrossOrigin("https://master.dm18u6p8rvugt.amplifyapp.com/")
     public List<Todo> getAllTodos(){
         return todoService.getAllTodos();
     }
@@ -28,7 +28,7 @@ public class TodoController {
     }
 
     @RequestMapping(method = RequestMethod.POST ,value ="/todos")
-    @CrossOrigin("http://localhost:3000")
+    @CrossOrigin("https://master.dm18u6p8rvugt.amplifyapp.com/")
     public void createTodo(@RequestBody List<Todo> todo){
         todoService.createTodo(todo);
     }
