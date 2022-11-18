@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TodoController {
-    final String vercel = "https://todo-r3xyqzgqm-enarddpascua.vercel.app/";
+    final String vercel = "https://todo-tau-ruby.vercel.app/";
     final String local = "http://localhost:3000";
 
     @Autowired
