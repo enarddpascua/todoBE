@@ -12,12 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TodoController {
+    final String vercel = "https://todo-r3xyqzgqm-enarddpascua.vercel.app/";
+    final String local = "http://localhost:3000";
 
     @Autowired
     private TodoService todoService;
 
     @RequestMapping("/todos")
-    @CrossOrigin("https://master.dm18u6p8rvugt.amplifyapp.com/")
+    @CrossOrigin(vercel)
     public List<Todo> getAllTodos(){
         return todoService.getAllTodos();
     }
@@ -28,7 +30,7 @@ public class TodoController {
     }
 
     @RequestMapping(method = RequestMethod.POST ,value ="/todos")
-    @CrossOrigin("https://master.dm18u6p8rvugt.amplifyapp.com/")
+    @CrossOrigin(vercel)
     public void createTodo(@RequestBody List<Todo> todo){
         todoService.createTodo(todo);
     }
